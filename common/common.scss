@@ -1,0 +1,39 @@
+.navigation-controls {
+  .topic-drafts-menu-trigger,
+  .fk-d-button-tooltip {
+    display: none;
+  }
+}
+
+.sidebar-new-topic-button {
+  flex: 1 1 auto;
+
+  &__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    margin: 1.5rem 1rem 0;
+
+    .mobile-view & {
+      margin: 0 0 1rem;
+    }
+
+    &:has(.topic-drafts-menu-trigger) {
+      .sidebar-new-topic-button {
+        border-radius: var(--d-button-border-radius) 0 0
+          var(--d-button-border-radius);
+        border-right: 1px solid var(--primary-300);
+      }
+    }
+
+    .fk-d-button-tooltip {
+      flex: 1 1 auto;
+    }
+
+    .topic-drafts-menu-trigger {
+      flex: 0 1 auto;
+      margin: 0;
+      border-radius: 0 var(--d-button-border-radius)
+        var(--d-button-border-radius) 0;
+    }
+  }
+}
