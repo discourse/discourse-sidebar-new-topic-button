@@ -18,7 +18,7 @@ export default class SidebarNewTopicButton extends Component {
   @tracked tag;
 
   get shouldRender() {
-    return this.currentUser;
+    return this.currentUser && !this.router.currentRouteName.includes("admin");
   }
 
   get canCreateTopic() {
@@ -69,8 +69,8 @@ export default class SidebarNewTopicButton extends Component {
 
   @action
   getCategoryandTag() {
-    this.category = this.router.currentRoute.attributes.category || null;
-    this.tag = this.router.currentRoute.attributes.tag || null;
+    this.category = this.router.currentRoute.attributes?.category || null;
+    this.tag = this.router.currentRoute.attributes?.tag || null;
   }
 
   <template>
