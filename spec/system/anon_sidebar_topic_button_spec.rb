@@ -7,5 +7,5 @@ RSpec.describe "Sidebar New Topic Button", system: true do
     visit("/latest")
     expect(page).not_to have_css(".sidebar-new-topic-button__wrapper")
     expect(page).not_to have_css(".sidebar-new-topic-button:not(.disabled)")
-  end  
+  end
 end

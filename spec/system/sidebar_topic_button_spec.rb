@@ -11,7 +11,7 @@ RSpec.describe "Sidebar New Topic Button", system: true do
     c.save
     c
   end
-  
+
   before { sign_in(user) }
 
   it "renders the new topic button in the sidebar" do
