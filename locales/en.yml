@@ -1,0 +1,5 @@
+en:
+  theme_metadata:
+    description: Adds a new topic button at the top of the navigation sidebar
+    settings:
+      example_setting: A description of a setting.
