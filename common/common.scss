@@ -41,3 +41,9 @@
 li.sidebar-section-link-wrapper[data-list-item-name="New Topic"] {
   display: none;
 }
+
+.has-full-page-chat {
+  .sidebar-new-topic-button__wrapper {
+    display: none;
+  }
+}
