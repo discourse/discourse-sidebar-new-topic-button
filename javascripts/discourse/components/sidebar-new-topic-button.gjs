@@ -40,12 +40,12 @@ export default class SidebarNewTopicButton extends Component {
   }
 
   get tagRestricted() {
-    return this.tag?.staff && !this.currentUser.staff;
+    return this.tag?.staff;
   }
 
   get createTopicDisabled() {
     return (
-      (this.category && !this.createTopicTargetCategory) || this.tagRestricted
+      (this.category && !this.createTopicTargetCategory) || (this.tagRestricted && !this.currentUser.staff)
     );
   }
 
