@@ -45,7 +45,8 @@ export default class SidebarNewTopicButton extends Component {
 
   get createTopicDisabled() {
     return (
-      (this.category && !this.createTopicTargetCategory) || this.tagRestricted
+      (this.category && !this.createTopicTargetCategory) ||
+      (this.tagRestricted && !this.currentUser.staff)
     );
   }
 
