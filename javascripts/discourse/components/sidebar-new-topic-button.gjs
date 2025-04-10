@@ -40,7 +40,7 @@ export default class SidebarNewTopicButton extends Component {
   }
 
   get tagRestricted() {
-    return this.tag?.staff;
+    return this.tag?.staff && !this.currentUser.staff;
   }
 
   get createTopicDisabled() {
