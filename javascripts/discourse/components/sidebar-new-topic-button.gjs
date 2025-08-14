@@ -64,7 +64,11 @@ export default class SidebarNewTopicButton extends Component {
 
   @action
   createNewTopic() {
-    this.composer.openNewTopic({ category: this.category, tags: this.tag?.id });
+      const readOnlyCategoryId = this.createTopicDisabled
+      ? this.category.id
+      : null;
+
+    this.composer.openNewTopic({ category: this.category, tags: this.tag?.id, readOnlyCategoryId });
   }
 
   @action
@@ -83,7 +87,6 @@ export default class SidebarNewTopicButton extends Component {
         <CreateTopicButton
           @canCreateTopic={{this.canCreateTopic}}
           @action={{this.createNewTopic}}
-          @disabled={{this.createTopicDisabled}}
           @label="topic.create"
           @btnClass={{this.createTopicClass}}
           @canCreateTopicOnTag={{not this.tagRestricted}}
