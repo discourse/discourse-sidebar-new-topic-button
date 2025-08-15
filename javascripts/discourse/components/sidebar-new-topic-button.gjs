@@ -91,6 +91,7 @@ export default class SidebarNewTopicButton extends Component {
         <CreateTopicButton
           @canCreateTopic={{this.canCreateTopic}}
           @action={{this.createNewTopic}}
+          @disabled={{this.createTopicDisabled}}
           @label="topic.create"
           @btnClass={{this.createTopicClass}}
           @canCreateTopicOnTag={{not this.tagRestricted}}
