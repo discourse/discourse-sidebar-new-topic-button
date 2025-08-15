@@ -64,11 +64,15 @@ export default class SidebarNewTopicButton extends Component {
 
   @action
   createNewTopic() {
-      const readOnlyCategoryId = this.createTopicDisabled
+    const readOnlyCategoryId = this.createTopicDisabled
       ? this.category.id
       : null;
 
-    this.composer.openNewTopic({ category: this.category, tags: this.tag?.id, readOnlyCategoryId });
+    this.composer.openNewTopic({
+      category: this.category,
+      tags: this.tag?.id,
+      readOnlyCategoryId,
+    });
   }
 
   @action
