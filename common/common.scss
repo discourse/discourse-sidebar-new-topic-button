@@ -1,6 +1,6 @@
 .navigation-controls {
-  .topic-drafts-menu-trigger,
-  .fk-d-button-tooltip {
+  #create-topic,
+  #create-topic + .fk-d-menu__trigger {
     display: none;
   }
 }
