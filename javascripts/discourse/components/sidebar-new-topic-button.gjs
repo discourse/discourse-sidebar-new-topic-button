@@ -63,6 +63,7 @@ export default class SidebarNewTopicButton extends Component {
           @canCreateTopic={{this.canCreateTopic}}
           @action={{this.createNewTopic}}
           @label="topic.create"
+          @btnId="create-topic-sidebar"
           @btnClass="btn-default sidebar-new-topic-button"
           @showDrafts={{gt this.draftCount 0}}
         />
