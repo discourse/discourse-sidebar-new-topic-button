@@ -42,7 +42,7 @@ export default class SidebarNewTopicButton extends Component {
   createNewTopic() {
     this.composer.openNewTopic({
       category: this.category,
-      tags: this.tag?.id,
+      tags: this.tag?.name,
     });
   }
 
