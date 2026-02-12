@@ -9,13 +9,13 @@ acceptance("Sidebar New Topic Button | tag route", function (needs) {
   needs.settings({ tagging_enabled: true });
 
   needs.pretender((server, helper) => {
-    server.get("/tag/important/l/latest.json", () => {
+    server.get("/tag/1/l/latest.json", () => {
       return helper.response(
         cloneJSON(discoveryFixture["/tag/important/l/latest.json"])
       );
     });
 
-    server.get("/tag/:tag_name/notifications", () => {
+    server.get("/tag/:tag_id/notifications", () => {
       return helper.response({
         tag_notification: {
           id: "important",
@@ -26,7 +26,7 @@ acceptance("Sidebar New Topic Button | tag route", function (needs) {
   });
 
   test("tag route provides tag name for button pre-fill", async function (assert) {
-    await visit("/tag/important");
+    await visit("/tag/important/1");
 
     const router = getOwner(this).lookup("service:router");
     const tagName = router.currentRoute.attributes?.tag?.name;
