@@ -4,8 +4,8 @@ import { action } from "@ember/object";
 import didInsert from "@ember/render-modifiers/modifiers/did-insert";
 import didUpdate from "@ember/render-modifiers/modifiers/did-update";
 import { service } from "@ember/service";
-import { gt } from "truth-helpers";
 import CreateTopicButton from "discourse/components/create-topic-button";
+import { gt } from "discourse/truth-helpers";
 
 export default class SidebarNewTopicButton extends Component {
   @service composer;
